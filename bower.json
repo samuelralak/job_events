@@ -1,0 +1,31 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "description": "wedding",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-mocks": "~1.4.7",
+    "bootstrap": "~3.3.5",
+    "angular-bootstrap": "~0.14.0",
+    "angular-ui-router": "~0.2.15",
+    "angular-animate": "",
+    "angular-resource": "",
+    "angular-cookies": "",
+    "ng-token-auth": "~0.0.28",
+    "angular-cookie": "~4.0.9",
+    "angular-rangeslider": "~0.0.14",
+    "seiyria-bootstrap-slider": "~5.2.4"
+  }
+}

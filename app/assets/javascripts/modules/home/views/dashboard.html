@@ -1,0 +1,67 @@
+<div ng-include="'assets/shared/_header.html'"></div>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3 col-md-3">
+				<div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion"><span class="glyphicon glyphicon-folder-close">
+                            </span>&nbsp;&nbsp;My Events</a>
+                        </h4>
+                    </div>
+                    <div id="dashboard.events" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tr ng-repeat = "event in events">
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil text-primary"></span>&nbsp;&nbsp;<a href="http://www.jquery2dotnet.com">{{event.title}}</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion"><span class="glyphicon glyphicon-user">
+                            </span>&nbsp;&nbsp;My Account</a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <a href="http://www.jquery2dotnet.com">Change Password</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="http://www.jquery2dotnet.com">Notifications</a> <span class="label label-info">5</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="http://www.jquery2dotnet.com">Import/Export</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-trash text-danger"></span><a href="http://www.jquery2dotnet.com" class="text-danger">
+                                            Delete Account</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			</div>
+			<div class="col-sm-9 col-md-9"></div>
+		</div>	
+	</div>
+</section>
+<div ng-include="'assets/shared/_footer.html'"></div>

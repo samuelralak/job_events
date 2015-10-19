@@ -1,0 +1,112 @@
+<div ng-include="'assets/shared/_header.html'"></div>
+<section>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<form  ng-submit="authForm.email.$error.usernameAvailable ? login() : register()" role="form" class="form-horizontal" name="authForm" novalidate>
+				<div class="form-group">
+					<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+					<div class="col-sm-8">
+						<input type="email" 
+							class="form-control" 
+							id="inputEmail3" 
+							placeholder="Email" 
+							name="email" 
+							ng-model="registrationForm.email" 
+							email-available-validator
+							required >
+						<div ng-if="authForm.email.$pending">
+							Checking Email...
+						</div>
+						<div ng-if="authForm.email.$pending">
+							Checking Email...
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+					<div class="col-sm-8">
+						<input type="password" 
+							name="password" 
+							ng-model="registrationForm.password" 
+							class="form-control" 
+							id="inputPassword3" 
+							placeholder="Password" 
+							validate-password-characters required >
+						<div ng-if="authForm.password.$error.required">
+							You did not enter a password
+						</div>
+						<div style= "display: none" ng-if="authForm.email.$error.usernameAvailable">
+							{{registrationForm.email = authForm.email.$viewValue}}
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group"  ng-hide="authForm.email.$pristine || authForm.email.$error.usernameAvailable">
+					<label for="inputPassword3" class="col-sm-2 control-label">Confirm Password</label>
+					<div class="col-sm-8">
+						<input type="password" 
+							name="password_confirmation" 
+							ng-model="registrationForm.password_confirmation" 
+							required="required" 
+							class="form-control" 
+							id="inputPassword3" 
+							placeholder="confirm password">
+					</div>
+				</div>
+
+				<div class="form-group"  ng-hide="authForm.email.$pristine || authForm.email.$error.usernameAvailable">
+					<label class="col-sm-2 control-label">Full name</label>
+					<div class="col-sm-8">
+						<input type="text" 
+							class="form-control" 
+							id="inputPassword3" 
+							placeholder="Full name" 
+							ng-model="registrationForm.name" >
+					</div>
+				</div>
+
+				<div class="form-group"  ng-hide="authForm.email.$pristine || authForm.email.$error.usernameAvailable">
+					<label for="inputPassword3" class="col-sm-2 control-label">DOB</label>
+					<div class="col-sm-8">
+						<input type="date" 
+							class="form-control" 
+							id="inputPassword3" 
+							placeholder="Date of birth"
+							name="date_of_birth" 
+							ng-model="registrationForm.date_of_birth" 
+							required >
+					</div>
+				</div>
+
+				<div class="form-group"  ng-hide="authForm.email.$pristine || authForm.email.$error.usernameAvailable">
+					<div class="col-sm-offset-2 col-sm-10">
+						<div class="radio">
+							<label>
+								<input type="radio" 
+									id="blankRadio1" 
+									value="MALE" aria-label="..."
+									ng-model="registrationForm.gender" > 
+								Male
+							</label>&nbsp;&nbsp;
+							<label>
+								<input type="radio" 
+									id="blankRadio1" 
+									value="FEMALE" aria-label="..."
+									ng-model="registrationForm.gender" > 
+								Female
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-8">
+						<button type="submit" class="btn btn-default">Sign in</button>
+					</div>
+				</div>
+			</form>	
+		</div>
+	</div>
+</section>
+<div ng-include="'assets/shared/_footer.html'"></div>

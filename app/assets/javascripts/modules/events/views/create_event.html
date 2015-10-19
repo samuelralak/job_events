@@ -1,0 +1,95 @@
+<div ng-include="'assets/shared/_header.html'"></div>
+	<section id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="section-heading">EVENT</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <form  name="eventForm" ng-submit="saveEvent()" id="contactForm" novalidate>
+                        <div class="row">
+
+                        		<fieldset>
+                            		<legend style="color: #fff">CHOOSE YOUR EVENT</legend>
+	                            	<div class="form-group">
+	                            		<select class="form-control" ng-model="event.event_type_id">
+	                            			<option selected> choose your event</option>
+	                            			<option  ng-repeat="event_type in event_types" value="{{event_type.id}}">
+	                            				{{event_type.name}}
+	                            			</option>
+	                            		</select>
+	                                </div>		
+                            	</fieldset>
+
+                            	<fieldset>
+                            		<legend style="color: #fff">NAME YOUR EVENT?</legend>
+	                            	<div class="form-group">
+	                                    <input type="text" 
+	                                    	class="form-control" 
+	                                    	placeholder="Event title *"
+	                                    	ng-model="event.title" 
+	                                    	required>
+	                                </div>		
+                            	</fieldset>
+
+                            	<fieldset>
+                            		<legend style="color: #fff">WHEN IS IT?</legend>
+	                            	<div class="form-group">
+	                                    <input type="date" 
+	                                    	class="form-control" 
+	                                    	ng-model = "event.event_date"
+	                                    	required >
+	                                </div>		
+                            	</fieldset>
+
+                            	<fieldset>
+                            		<legend style="color: #fff">WHATS THE VENUE</legend>
+	                            	<div class="form-group">
+	                                    <input 
+	                                    	type="text" 
+	                                    	class="form-control" 
+	                                    	placeholder="Event venue *" 
+	                                    	ng-model="event.venue" 
+	                                    	required>
+	                                </div>		
+                            	</fieldset>
+
+                            	<fieldset>
+                            		<legend style="color: #fff">CONTACT PERSON</legend>
+	                            	<div class="form-group">
+	                                    <input type="text" 
+	                                    	class="form-control" 
+	                                    	placeholder="Name *"
+	                                    	ng-model="event.contact_person.name" 
+	                                    	required >
+	                                </div>		
+	                                <div class="form-group">
+	                                    <input type="text" 
+	                                    	class="form-control" 
+	                                    	placeholder="Mobile *" 
+	                                    	ng-model="event.contact_person.mobile" 
+	                                    	required >
+	                                </div>		
+	                                <div class="form-group">
+	                                    <input type="text" 
+	                                    	class="form-control" 
+	                                    	placeholder="Email *" 
+	                                    	ng-model="event.contact_person.email" 
+	                                    	required >
+	                                </div>		
+                            	</fieldset>
+                            
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-xl">NEXT</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+<div ng-include="'assets/shared/_footer.html'"></div>
